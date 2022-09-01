@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&@600&display=swap');
+
+* {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+}
+
+:root {
+        --Lineargradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+        --Red: hsl(0, 100%, 66%);
+        --White: hsl(0, 0%, 100%);
+        --Lightgrayishviolet: hsl(270, 3%, 87%);
+        --Darkgrayishviolet: hsl(279, 6%, 55%);
+        --Verydarkviolet: hsl(278, 68%, 11%);
+}
+
+body {
+        font-size: 62.5%;
+        font-family: "Space Grotesk";
+        height: 100vh;
+        width: 100%;
+}
+
+.container {
+        min-height: 100vh;
+}
+
+.leftDiv {
+        margin-bottom: 6rem;
+}
+
+.bg-image {
+        background-image: url(./images/bg-main-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 230px;
+        position: absolute;
+}
+
+.frontCard,
+.backCard {
+        width: 286px;
+        height: 158px;
+        border-radius: 5px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        color: var(--white);
+
+}
+
+.frontCard {
+        background-image: url("./images/bg-card-front.png");
+        bottom: -2.5rem;
+        left: 1rem;
+        z-index: 1;
+}
+
+.backCard {
+        background-image: url("./images/bg-card-back.png");
+}
+
+.backContent {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 1.8rem 0.2rem 0;
+        letter-spacing: 0.2rem;
+}
+
+#backPass {
+        font-size: 1rem;
+        color: var(--White);
+}
+
+.cardLogo {
+        height: 5rem;
+        padding: 1.4rem 2rem;
+}
+
+#cardNumber {
+        display: flex;
+        justify-content: center;
+        font-size: 1.1rem;
+        color: var(--White);
+        letter-spacing: 0.1rem;
+}
+
+.frontCard_BottomValues {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: auto;
+        padding-top: 1.2rem;
+        font-size: 0.9rem;
+        color: var(--White);
+}
+
+#name {
+        text-transform: uppercase;
+}
+
+.rightDiv,
+.submitContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        max-width: 370px;
+        width: 100%;
+        padding: 0 1rem;
+}
+
+.cardLabel {
+        color: var(--Verydarkviolet);
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        padding: 2px 0;
+        width: 100%;
+}
+
+.cardInformation {
+        padding: 0.8rem;
+        font-size: 1.2rem;
+        width: 100%;
+        border-radius: 6px;
+        outline: none;
+        border: 1px solid var(--Lightgrayishviolet);
+}
+
+.lastFiled {
+        display: flex;
+        justify-content: space-between;
+}
+
+.expDates {
+        display: flex;
+        width: 100%;
+}
+
+.exp {
+        width: 90%;
+        max-width: 76px;
+        text-align: left;
+}
+
+.lastFieldRight {
+        width: 100%;
+        max-width: 170px;
+        margin-left: 10px;
+}
+
+.btn {
+        display: flex;
+        justify-content: center;
+}
+
+.continue-button {
+        margin-top: 1rem;
+}
+
+.hide {
+        display: none;
+}
+
+.continue-button {
+        width: 100%;
+        max-width: 370px;
+        border-radius: 7px;
+        border: none;
+        padding: 1rem;
+        color: var(--White);
+        background-color: var(--Verydarkviolet);
+        font-size: 1.1rem;
+}
+
+.continue-button:hover {
+        opacity: 0.7;
+}
+
+.error {
+        padding: 5px;
+        color: red;
+        font-size: 0.7rem;
+        visibility: hidden;
+}
+
+.submitContainer h2 {
+        font-size: 1rem;
+        padding: 1rem 0;
+        text-align: center;
+
+}
+
+.submitContainer p {
+        font-size: 1rem;
+}
+
+.attribution {
+        margin-top: 6rem;
+        font-size: 0.8rem;
+        text-align: center;
+}
+
+.attribution a {
+        color: hsl(228, 45%, 44%);
+}
+
+@media (max-width:980px) {
+        .leftDiv_Container {
+                width: 100%;
+                height: 230px;
+        }
+
+        .leftDiv_Wrapper {
+                width: 100%;
+                height: 100%;
+                position: relative;
+        }
+
+        .frontCard,
+        .backCard {
+                width: 286px;
+                height: 158px;
+                border-radius: 5px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                color: var(--white);
+        }
+
+        .backCard {
+                right: 1rem;
+                top: 1.5rem;
+        }
+
+}
+
+@media (min-width:1000px) {
+        .bg-image {
+                background-image: url(./images/bg-main-desktop.png);
+                width: 30%;
+                height: 100%;
+        }
+
+        .container {
+                display: flex;
+
+                justify-content: space-between;
+                margin: 0;
+        }
+
+        .leftDiv_Container {
+                display: flex;
+                flex-direction: column-reverse;
+                width: 30%;
+                height: 100%;
+                position: absolute;
+        }
+
+        .leftDiv_Container {
+                display: flex;
+                width: 30%;
+                height: 100%;
+                position: absolute;
+        }
+
+        .leftDiv_Container {
+                width: 100%;
+                height: 230px;
+        }
+
+        .leftDiv_Wrapper {
+                width: 100%;
+                height: 100%;
+        }
+
+        .rightDiv {
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 20%;
+                position: relative;
+        }
+
+        .frontCard,
+        .backCard {
+                margin: 0 auto;
+                transform: scale(1.20);
+        }
+
+        .frontCard {
+                position: absolute;
+                right: 43rem;
+                top: 8rem;
+        }
+
+        .backCard {
+
+                right: 50rem;
+                top: 21rem;
+        }
+
+
+
+
+
+
+
+
+}

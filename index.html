@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="leftDiv">
+        <div class="bg-image"></div>
+        <div class="leftDiv_Container">
+          <div class="leftDiv_Wrapper">
+            <div class="frontCard">
+              <div class="frontCardValues">
+                <div class="frontCard_TopValues">
+                  <img src="./images/card-logo.svg" alt="" class="cardLogo" />
+                  <output id="cardNumber">0000 0000 0000 0000</output>
+                </div>
+                <div class="frontCard_BottomValues">
+                  <p id="name">Jane Appleseed</p>
+                  <p id="expDate">
+                    <span id="expDateMonth">00</span>/<span id="expDateYear"
+                      >00</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="backCard">
+              <div class="backContent">
+                <output id="backPass">000</output>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rightDiv">
+        <div class="info">
+          <div class="infofields">
+            <form>
+            <p class="cardLabel">Cardholder Name</p>
+            <input
+              type="text"
+              id="cardHolderName"
+              class="cardInformation"
+              placeholder=" e.g. Jane Appleseed"
+            />
+            <p class="error">Cannot be empty</p>
+          </div>
+          <div class="infofields">
+            <p class="cardLabel">Card Number</p>
+            <input
+              type="text"
+              id="cardHolderNumber"
+              class="cardInformation"
+              placeholder=" e.g. 1234 5678 9123 0000"
+              maxlength="16"
+              onkeypress="return onlyNumberKey(event)"
+            />
+            <p id="numFieldError" class="error">Need to be 16 digits!</p>
+          </div>
+
+          <div class="infofields lastFiled">
+            <div class="lastFieldLeft">
+              <p class="cardLabel">EXP.DATE<span>(MM/YY)</span></p>
+
+              <div class="expDates">
+                <div>
+                  <input
+                    type="text"
+                    id="month"
+                    class="cardInformation exp"
+                    placeholder="MM"
+                    maxlength="2"
+                    onkeypress="return onlyNumberKey(event)"
+                  />
+                  <p class="error">Can't be blank</p>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    id="year"
+                    class="cardInformation exp"
+                    placeholder="YY"
+                    maxlength="2"
+                    onkeypress="return onlyNumberKey(event)"
+                  />
+                  <p class="error">Can't be blank</p>
+                </div>
+              </div>
+            </div>
+            <div class="lastFieldRight">
+              <p class="cardLabel">CVC</p>
+              <div class="cvc">
+                <input
+                  type="text"
+                  id="cvcNumber"
+                  class="cardInformation cvcNum"
+                  placeholder=" e.g. 123"
+                  maxlength="3"
+                  onkeypress="return onlyNumberKey(event)"
+                />
+                <p class="error">Can't be blank</p>
+              </div>
+            </div>
+          </div>
+          <div class="btn">
+            <input type="button" value="Confirm" id="confirmBtn" class="continue-button"/>
+          </div>
+        </form>
+        </div>
+      </div>
+      
+      <div class="submitContainer hide">
+        <img src="images/icon-complete.svg" alt="" />
+        <div>
+          <h2>Thank you!</h2>
+          <p>We've added your card details</p>
+        </div>
+        <button type="button" class="continue-button" id="continueBtn">
+          Continue
+        </button>
+        
+      </div>
+      
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
